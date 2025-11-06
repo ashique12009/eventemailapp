@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact • Money Monster Takeover</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: "Roboto", sans-serif; background-color: #87ceeb; line-height: 1.6; min-width: 0; padding-bottom: 120px; }
+
+      .hero {
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/assets/images/bg.png");
+        background-size: cover; background-position: center; height: 55vh; min-height: 420px;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        text-align: center; padding: 40px 0; position: relative; color: white;
+      }
+      .yapit-logo img { height: auto; width: 12vw; object-fit: cover; }
+      .page-title { font-family: "Bodoni Moda", serif; font-weight: 700; font-size: clamp(2.2rem, 8vw, 5rem); letter-spacing: -2px; line-height: 1; margin-top: 14px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+      .unleashed-badge { border: 2px solid white; padding: 5px 20px; display: inline-block; margin-top: 10px; font-weight: bold; letter-spacing: 3px; font-size: 1.2rem; border-radius: 20px; text-transform: uppercase; }
+      .nav { text-align: center; margin: 14px 0 0 0; }
+      .nav a { color: #fff; text-decoration: none; font-weight: 700; background: #ef6425; padding: 8px 14px; border-radius: 16px; margin: 0 6px; display: inline-block; }
+
+      .content { background-color: #87ceeb; padding: 2rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100vw; max-width: 100%; }
+      .section { background: #ffffff; width: min(1000px, 92vw); margin: 14px auto; padding: 24px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 6px; }
+      .section h2 { font-size: clamp(1.25rem, 3.5vw, 2rem); margin-bottom: 10px; color: #000; font-weight: 900; text-align: left; }
+      .section p { font-size: 1rem; color: #161616; line-height: 1.8; }
+
+      .form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+      .form .full { grid-column: 1 / -1; }
+      .form label { font-weight: 700; font-size: 0.95rem; color: #004b87; margin-bottom: 6px; display: inline-block; }
+      .form input, .form textarea, .form select {
+        padding: 12px 14px; border: 1px solid rgba(0,0,0,0.1); font-size: 1rem; color: #333; width: 100%; outline: none;
+      }
+      .form textarea { min-height: 140px; resize: vertical; }
+      .actions { margin-top: 8px; }
+      .submit-btn { background-color: #ef6425; color: white; border: none; padding: 12px 20px; font-size: 1rem; font-weight: bold; cursor: pointer; letter-spacing: 1px; transition: background-color 0.3s; }
+      .submit-btn:hover { background-color: #ca4f08; }
+
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .card { background: #fff; border: 1px solid rgba(0,0,0,0.05); padding: 18px; border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.06); }
+      .card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+      .card p { font-size: 0.95rem; }
+
+      @media (max-width: 1024px) { .hero { height: 45vh; } .cards { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 768px) {
+        .yapit-logo img { width: 30vw; }
+        .form { grid-template-columns: 1fr; }
+        .cards { grid-template-columns: 1fr; }
+        .section { padding: 18px; }
+      }
+    </style>
+  </head>
+  <body style="min-width: 0">
+    <section class="hero">
+      <div class="yapit-logo">
+        <img src="/assets/images/yapit_logo.png" alt="Yapit Logo" />
+      </div>
+      <div class="page-title">Contact</div>
+      <div class="unleashed-badge">UNLEASHED</div>
+      <div class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="section">
+        <h2>Get In Touch</h2>
+        <p>Have questions about the event, partnerships, or media? Send us a note.</p>
+        <form class="form" action="#" method="post">
+          <div>
+            <label for="firstName">First Name</label>
+            <input id="firstName" name="firstName" type="text" placeholder="Sierra" required />
+          </div>
+          <div>
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="lastName" type="text" placeholder="Glam" required />
+          </div>
+          <div class="full">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div>
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option>General</option>
+              <option>Tickets</option>
+              <option>Partnerships</option>
+              <option>Media</option>
+            </select>
+          </div>
+          <div>
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" placeholder="(555) 123‑4567" />
+          </div>
+          <div class="full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us how we can help"></textarea>
+          </div>
+          <div class="actions full">
+            <button class="submit-btn" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="section">
+        <h2>Event & Media Info</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Email</h3>
+            <p><strong>events@yapit.com</strong></p>
+            <p>We aim to respond within 2 business days.</p>
+          </div>
+          <div class="card">
+            <h3>Location</h3>
+            <p>St. Thomas, USVI</p>
+            <p>Money Monster Takeover • March 20–22, 2026</p>
+          </div>
+          <div class="card">
+            <h3>Partnerships</h3>
+            <p><strong>partners@yapit.com</strong></p>
+            <p>Brand activations, vendors, and sponsorships.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+
